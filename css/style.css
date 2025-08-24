@@ -60,6 +60,45 @@ body{
         opacity: 1;
     }
 }
+#burger{
+    height: 30px;
+    width: 40px;
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+.bur1{
+    position: relative;
+    background-color: #fff;
+    height: 5px;
+    width: 40px;
+    border-radius: 10px;
+    top: 0;
+    transition: 0.5s;
+}
+.bur2{
+    position: relative;
+    background-color: #fff;
+    height: 5px;
+    width: 40px;
+    border-radius: 10px;
+    top: 15px;
+    transition: 0.5s;
+}
+.bur3{
+    position: relative;
+    background-color: #fff;
+    height: 5px;
+    width: 40px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
 nav{
     background: transparent;
     display: flex;
@@ -77,12 +116,60 @@ ul{
     justify-content: space-evenly;
     width: 65%;
 }
-nav>div{
+.main-nav{
     display: flex;
     justify-content: end;
     width: 60%;
     margin: 0;
 }
+.side{
+    width: 100vw;
+    height:0;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 10vh;
+    z-index: 10000000;
+    transition: 0.5s linear;
+    overflow-x: hidden;
+    background-color: var(--royal-blue);
+    padding-left: 55px;
+}
+.hig{
+    height: 42vh;
+}
+.bur1r {
+    transform: rotate(45deg);
+    top: 10px;
+}
+.bur2r {
+    transform: rotate(45deg);
+    top: 5px;
+}
+.bur3r {
+    transform: rotate(-45deg);
+    top: 0px;
+}
+.side>a{
+    margin-top: 10px;
+}
+.side>button{
+    font-size: 20px;
+    background-color: var(--orange);
+    color: #fff;
+    padding: 0 23px 0 23px;
+    border: 2px transparent solid;
+    outline: none;
+    border-radius: 50px;
+    height: 55px;
+    position: relative;
+    top: 5px;
+    font-family: var(--f-barlow);
+    width: 20vw;
+    margin-top: 10px;
+    margin-left: -20px;
+}
+
 a{
     color: #fff;
     text-decoration: none;
@@ -98,11 +185,16 @@ li{
     color: #fff;
     font-size: 16px;
 }
-nav>div>ul>li:hover .links{
+.main-nav>ul>li:hover .links{
     color: var(--orange);
+}
+.links:hover{
+    color: var(--orange);
+}
+.links{
     transition: 0.2s linear;
 }
-nav>div>button{
+.main-nav>button{
     font-size: 20px;
     background-color: var(--orange);
     color: #fff;
@@ -212,23 +304,23 @@ main{
     }
 }
 .h-1{
-    font-size: 30px;
+    font-size: 2.3vw;
     font-weight: 500;
     margin: 0;
     margin-top: 50px;
 }
 .h-2{
-    font-size: 55px;
+    font-size: 4.5vw;
     margin: 0;
     height: 60px;
 }
 .h-3{
-    font-size: 25px;
+    font-size: 2vw;
     margin: 0;
     margin-top: 30px;
 }
 .h-left>h4{
-    font-size: 20px;
+    font-size: 1.5vw;
     margin: 0;
     margin-top: 30px;
     font-weight: 200;
@@ -304,7 +396,6 @@ button{
     height: 50vh;
     margin-top: 50px;
     margin-left: 9vw;
-    padding: 100;
     background-position: center;
     background-size: 120%;
     background-repeat: no-repeat;
@@ -338,10 +429,6 @@ button{
     position: relative;
     top: 2px;
     left: 10px;
-}
-.proto:hover{
-    background-size: 130%;
-
 }
 .ri-po>h3,.ri-po>h1,.ri-po>button{
     position: relative;
@@ -529,4 +616,176 @@ footer{
 }
 .pol:hover{
     color: #fff;
+}
+@media screen and (min-width: 1000px) {
+    .proto:hover{
+    background-size: 130%;
+}
+}
+@media screen and (max-width: 1000px) {
+    .widget{
+        display: none;
+    }
+    main{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    nav{
+        background-color: var(--royal-blue);
+        width: 100%;
+        justify-content: space-between;
+        padding-left: 40px;
+    }
+    .main-nav{
+        display: none;
+    }
+    #burger{
+        display: flex;
+        position: relative;
+        right: 60px;
+    }
+    .h-right{
+        left: 0;
+        width: fit-content;
+    }
+    .h-left{
+        left: 0;
+        text-align: center;
+        position: relative;
+        top: -20px;
+    }
+    h1{
+        margin: 0;
+    }
+    .h-left>button{
+        margin: 0;
+        margin-top: 15px;
+    }
+    .h-right>img{
+        width: 20vw;
+        height: 25vw;
+    }
+    .w4{
+        top: 19vw;
+        width: 13vw;
+        height: 13vw;
+    }
+    .sec-about{
+        flex-direction: column;
+    }
+    .about-text{
+        width: 70vw;
+    }
+    .proto{
+        background-size: cover;
+    }
+    .skills{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+    }
+    .bar{
+        width: 72vw;
+    }
+    .progress{
+        width: 70.4vw;
+    }
+    .skill{
+    width: 72vw;
+    }
+    .form-bod{
+        flex-direction: column;
+    }
+    .sec-form{
+        height: max-content;
+        padding-top: 10vh;
+    }
+    input, textarea{
+        width: 135%;
+    }
+    .blogs{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        row-gap: 100px;
+    }
+}
+@media (max-width: 480px){
+    .h-right{
+        left: 0;
+        width: 50vw;
+        height: 50vw;
+    }
+    .h-left{
+        left: 0;
+        text-align: center;
+        position: relative;
+        top: -20px;
+    }
+    h1{
+        margin: 0;
+    }
+    .h-left>button{
+        margin: 0;
+        margin-top: 15px;
+    }
+    .h-right>img{
+        width: 100%;
+        height: 100%;
+    }
+        .h-right{
+        left: 0;
+        width: 50vw;
+        height: 50vw;
+    }
+    .h-left{
+        width: 70vw;
+    }
+    h1{
+        margin: 0;
+    }
+    .h-1{
+        font-size: 16px;
+        margin-top: 10px;
+    }
+    .h-2{
+        font-size: 20px;
+        height: fit-content;
+    }
+    .h-3{
+        font-size: 20px;
+        margin-top: 10px;
+        width: 70vw;
+    }
+    .h-left>h4{
+        font-size: 13px;
+    }
+    .about-img{
+        width: 90%;
+        padding-left: 0px;
+        height: 80vh;
+    }
+    .img-1{
+        width: 100%;
+    }
+    .img-2{
+        display: none;
+    }
+    .sec-form{
+        padding: 20px 0 0 20px;
+        width: 90vw;
+        margin: 60px 0 0 0;
+    }
+    .ri-po>h3,.ri-po>h1,.ri-po>button{
+    position: relative;
+    left: 0;
+    }
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    footer > p{
+        width: 80%;
+    }
+    .w4{
+        display: none;
+    }
 }

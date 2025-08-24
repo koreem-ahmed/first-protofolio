@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Template for protofolio</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,7 +24,7 @@
     
     <nav id="nav">
         <a>Kareem Ahmed</a>
-        <div>
+        <div class="main-nav">
             <ul>
                 <li><a class="links" href="#">Home</a></li>
                 <li><a class="links" href="#about">About</a></li>
@@ -35,13 +35,27 @@
             </ul>
             <button>Download CV</button>
         </div>
+        <button id="burger" onclick="open_nav()">
+            <div class="bur1"></div>
+            <div class="bur2"></div>
+            <div class="bur3"></div>
+        </button>
     </nav>
-    
+    <div class="side">
+        <a class="links" href="#">Home</a>
+        <a class="links" href="#about">About</a>
+        <a class="links" href="#poro">Protofolio</a>
+        <a class="links" href="#skills">Skills</a>
+        <a class="links" href="#contact">Contact</a>
+        <a class="links" href="#blog">Blog</a>
+        <button>Download CV</button>
+    </div>
+
     <!-- Hero -->
     
     <main>
         <div class="h-left">
-            <h1 class="h-1">Hello I'M</h1>
+            <h1 class="h-1">Hello I'm</h1>
             <h1 class="h-2">Kareem Ahmed</h1>
             <h1 class="h-3">Software enginner from Egypt</h1>
             <h4>i began my career in soft ware from 3 years when i know my first line of code which was HTML and this was the start of the road!</h4>
@@ -64,6 +78,7 @@
             <div class="w4">
                 <img src="imgs/rotate-img.png" alt="">
             </div>
+        </div>
     </main>
     
     <!-- About me -->
@@ -76,7 +91,7 @@
             <img class="img-4" src="" alt="">
             <img class="img-5" src="" alt="">
         </div>
-        <div class="about-text  ">
+        <div class="about-text">
             <h3>I'm a Developer</h2>
             <h1>I Develop Application that serve the socity</h1>
             <p>the process of making applications and websites that serves a real perpous is a process that has many stages and need a lot of planning and hard work</p>

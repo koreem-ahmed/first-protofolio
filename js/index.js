@@ -1,5 +1,5 @@
 window.addEventListener("scroll", function() {
-    if (window.scrollY === 0) {
+    if (window.scrollY === 0 && window.innerWidth > 1000) {
         document.getElementById("nav").style.cssText = "background-color: transparent; height: 15vh;";
     } else {
         document.getElementById("nav").style.cssText = "background-color: hsl(243, 23%, 18%); height: 13vh;";
@@ -20,3 +20,9 @@ document.querySelector(".to-top").addEverntListener("click", function(){
         behavior: "smooth"
     })
 })
+function open_nav() {
+    document.querySelector(".side").classList.toggle("hig")
+    document.querySelector(".bur1").classList.toggle("bur1r")
+    document.querySelector(".bur2").classList.toggle("bur2r")
+    document.querySelector(".bur3").classList.toggle("bur3r")
+}
