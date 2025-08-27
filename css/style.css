@@ -587,6 +587,8 @@ form{
     color: #fff;
     cursor: pointer;
     transition: 0.2s linear;
+    border: 2px white solid;
+    padding: 20px;
 }
 .img-div{
     width: 100%;
@@ -788,4 +790,10 @@ footer{
     .w4{
         display: none;
     }
+}
+.blog>h2{
+    width: 90%
+}
+.blog>h3{
+    color: var(--orange);
 }
