@@ -194,7 +194,7 @@ li{
 .links{
     transition: 0.2s linear;
 }
-.main-nav>button{
+.main-nav>a>button{
     font-size: 20px;
     background-color: var(--orange);
     color: #fff;
